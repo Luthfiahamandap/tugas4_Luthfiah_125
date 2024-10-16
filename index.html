@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #d9d9d9;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            padding: 30px;
+            border: none;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            width: 30rem;
+            height: 15rem;
+            background-color: #001427;
+            border-radius: 13px;
+        }
+        .card h1 {
+            font-size: 30px;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 20px;
+        }
+
+        .button {
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        }
+
+        #mau {
+            background-color: #8d0801;
+        }
+        
+        #tidak {
+            background-color: #006400;
+            position: relative;
+        }
+
+        #mau , #tidak {
+            transition: .3s;
+            color: white;
+            font-weight: bold;
+        }
+
+        #mau:hover , #tidak:hover {
+            transform: scale(1.3);
+        }
+
+    </style>
+
+    <title>Kamu mau ga sayang?</title>
+  </head>
+  <body>
+    
+    <div class="container"> 
+        <div class="card">
+            <h1> Sayang, kamu mau ga jadi pacar aku? </h1>
+            <div class="button">
+                <button type="button" class="btn btn-outline-light" id="mau" onclick="mau()">Mauu sayangg</button>
+                <button type="button" class="btn btn-outline-light" id="tidak" onclick="tidak()">gak, kamu jelek</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <script> 
+        let pindah = 1;
+        function mau() {
+            alert("cium dulu");
+            location.replace("https://wa.me/6283841187265?text=Love%20you%20mmuach%20");
+        }
+        
+        function tidak() {
+            const button = document.getElementById("tidak");
+
+            if (pindah === 1) {
+                button.style.top = '200px';
+                button.style.left = '80x';
+                pindah = 2;
+            } 
+            else if (pindah === 2) {
+                button.style.top = '200px';
+                button.style.left = '60px';
+                pindah = 3;
+            } 
+            else if (pindah === 3) {
+                button.style.top = '156px';
+                button.style.left = '20px';
+                pindah = 1;
+            }
+        }
+    </script>
+
+  </body>
+</html>
